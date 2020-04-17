@@ -2,12 +2,12 @@ const Author = require('../models/author');
 
 // Display list of all Authors.
 exports.author_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author list');
+    res.send('Hello all: Swaroopa Tirumalareddy');
 };
 
 // Display detail page for a specific Author.
 exports.author_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author detail: ' + req.params.id);
+    res.send('NOT IMPLEMENTED: Author details: ' + req.params.id);
 };
 
 // Display Author create form on GET.
