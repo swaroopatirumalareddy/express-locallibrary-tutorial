@@ -19,7 +19,7 @@ dotenv.config({ path: '.env' })
 const mongoose = require('mongoose');
 const dev_db_url = 'mongodb+srv://swaroopatirumalareddy:Swaroopa@f7@cluster0-vgjt3.azure.mongodb.net/local_library?retryWrites=true&w=majority';
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
